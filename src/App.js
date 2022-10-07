@@ -4,17 +4,17 @@ const tg = window.Telegram.WebApp
 
 function App() {
 
+  const { onToggleButton } = useTelegram()
+
   useEffect(() => {
     tg.ready()
   }, [])
 
-  const onClose = () => {
-    tg.close()
-  }
+
   return (
     <div className="App">
-      work
-      <button onClick={onClose}>Закрыть</button>
+
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
